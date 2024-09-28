@@ -29,3 +29,12 @@ def prob_draw(val):
 
 PROB_FOUR = prob_draw(4)        
 print(PROB_FOUR)
+
+def prob_greater_equal_high(val):
+    prob = 0
+    for i in range(val, ACE_HIGH + 1):
+        prob += prob_draw(i)
+    return prob
+
+PROB_GREATER_FOUR_HIGH = prob_greater_equal_high(4)
+print(PROB_GREATER_FOUR_HIGH)
